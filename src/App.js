@@ -5,7 +5,7 @@ import Images from "./Images";
 import CardList from "./components/Cardlist";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [changedInfo, setInfo] = useState("");
+  const [changedInfo, setInfo] = useState([]);
   let modalInfo = "";
   const changeInfo = (info) => {
     modalInfo = info;
@@ -37,9 +37,9 @@ function App() {
             Modal
           </Modal>
         </div>
-        <CardList changeinfo={infoChange} images={Images} />
+        <CardList open={setIsOpen} changeinfo={infoChange} images={Images} />
       </div>
-      <h1>{changedInfo}</h1>
+      <h1>{changedInfo[0]}</h1>
     </Fragment>
   );
 }

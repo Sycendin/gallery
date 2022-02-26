@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-const CardList = ({ changeinfo, images }) => {
+const CardList = ({ changeinfo, images, open }) => {
   // const cardArray= robots.map((user, i) =>{
   // need a unique key for map arrays, otherwise react wont like that
   // changeinfo("blash");
@@ -16,6 +16,7 @@ const CardList = ({ changeinfo, images }) => {
             text={images[i].text}
             directLink={images[i].directLink}
             change={changeinfo}
+            open={open}
           />
         );
       })}
