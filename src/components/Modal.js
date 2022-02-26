@@ -16,7 +16,7 @@ export default function Modal({ open, onClose, info }) {
           src={info}
           alt="face"
         ></img>
-        <p>This is a drawn image of Mike Trout's face</p>
+        <p className="p">This is a drawn image of Mike Trout's face</p>
         <button className="Modal-button" onClick={onClose}>
           Close Modal
         </button>

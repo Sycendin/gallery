@@ -1,32 +1,46 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Modal from "./components/Modal";
+import Images from "./Images";
+import CardList from "./components/Cardlist";
 function App() {
-  function changeInfo(info) {
-    modalInfo = info;
-  }
   const [isOpen, setIsOpen] = useState(false);
+  const [changedInfo, setInfo] = useState("");
   let modalInfo = "";
+  const changeInfo = (info) => {
+    modalInfo = info;
+  };
+  const infoChange = (event) => {
+    setInfo(event);
+  };
+
   return (
-    <div className="App">
-      <div className="Button-wrapper">
-        <button onClick={() => setIsOpen(true)}>Open Modal</button>
-        <img
-          className="gallery-image"
-          onMouseOver={changeInfo(
-            "https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
-          )}
-          onClick={() => setIsOpen(true)}
-          style={{ height: 300, width: 200 }}
-          src="https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
-          alt="mike"
-        ></img>
-        <Modal open={isOpen} info={modalInfo} onClose={() => setIsOpen(false)}>
-          Modal
-        </Modal>
+    <Fragment>
+      <div className="App">
+        <div className="Button-wrapper">
+          <button onClick={() => setIsOpen(true)}>Open Modal</button>
+          <img
+            className="gallery-image"
+            onMouseOver={changeInfo(
+              "https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
+            )}
+            onClick={() => setIsOpen(true)}
+            style={{ height: 300, width: 200 }}
+            src="https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
+            alt="mike"
+          ></img>
+          <Modal
+            open={isOpen}
+            info={modalInfo}
+            onClose={() => setIsOpen(false)}
+          >
+            Modal
+          </Modal>
+        </div>
+        <CardList changeinfo={infoChange} images={Images} />
       </div>
-      <div className="Other-content">Other content</div>
-    </div>
+      <h1>{changedInfo}</h1>
+    </Fragment>
   );
 }
 
