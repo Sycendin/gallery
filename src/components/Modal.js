@@ -6,20 +6,25 @@ export default function Modal({ open, onClose, info }) {
   if (!open) return null;
   return ReactDOM.createPortal(
     <Fragment>
-      <div className="Overlay-styles"></div>
+      <div className=" Overlay-styles"></div>
 
-      <div className="Modal-style">
-        <div className="Modal-close"></div>
-        <img
-          className="image"
-          style={{ height: 500, width: 300 }}
-          src={info}
-          alt="face"
-        ></img>
-        <p className="p">This is a drawn image of Mike Trout's face</p>
-        <button className="Modal-button" onClick={onClose}>
-          Close Modal
-        </button>
+      <div className=" flex flex-column Modal-style">
+        <h1 className="center">{info[0]}</h1>
+        <img className="br2 w-40 h-40 center" src={info[2]} alt="face"></img>
+        <div className="flex justify-center">
+          <button
+            className="b--red hover-bg-red br2 bg-light-red ma2"
+            onClick={() => window.open(info[3], "_blank")}
+          >
+            View Post
+          </button>
+          <button
+            className="b--red hover-bg-red br2  bg-light-red  ma2"
+            onClick={onClose}
+          >
+            Close
+          </button>
+        </div>
       </div>
     </Fragment>,
     document.getElementById("portal")

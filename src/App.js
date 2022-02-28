@@ -7,10 +7,7 @@ import Nav from "./components/Nav";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [changedInfo, setInfo] = useState([]);
-  let modalInfo = "";
-  const changeInfo = (info) => {
-    modalInfo = info;
-  };
+
   const infoChange = (event) => {
     setInfo(event);
   };
@@ -18,22 +15,14 @@ function App() {
   return (
     <Fragment>
       <Nav></Nav>
+      <h1 className="flex justify-center bg-light-red">
+        Click on an image for more info
+      </h1>
       <div className="App">
         <div className="Button-wrapper">
-          <button onClick={() => setIsOpen(true)}>Open Modal</button>
-          <img
-            className="gallery-image"
-            onMouseOver={changeInfo(
-              "https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
-            )}
-            onClick={() => setIsOpen(true)}
-            style={{ height: 300, width: 200 }}
-            src="https://cdn.discordapp.com/attachments/788247984517283880/933260764351963206/MikeTroutFace.png"
-            alt="mike"
-          ></img>
           <Modal
             open={isOpen}
-            info={modalInfo}
+            info={changedInfo}
             onClose={() => setIsOpen(false)}
           >
             Modal
@@ -41,7 +30,6 @@ function App() {
         </div>
         <CardList open={setIsOpen} changeinfo={infoChange} images={Images} />
       </div>
-      <h1>{changedInfo[0]}</h1>
     </Fragment>
   );
 }

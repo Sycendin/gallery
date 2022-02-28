@@ -1,8 +1,6 @@
 .Modal-style {
   position: fixed;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr, 1fr, 1fr;
+
   gap: 10px;
   padding: 10px;
   top: 50%;
@@ -21,30 +19,4 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
-}
-
-.Modal-close {
-  bottom: 100px;
-}
-.image {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  border-radius: 5px;
-}
-.p {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  text-align: center;
-  margin-bottom: 400px;
-}
-.Modal-button {
-  grid-column-end: -1;
-  grid-row-end: 4;
-
-  height: 40px;
-  border-radius: 5px;
 }

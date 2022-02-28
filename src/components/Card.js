@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-
 // enter properties
 // destructure from props in the parameters
 const Card = ({ day, text, link, directLink, change, open }) => {
@@ -11,16 +10,14 @@ const Card = ({ day, text, link, directLink, change, open }) => {
     <Fragment>
       <div className="bg-light-red dib br3 pa3 ma2 grow bw2 shadow-5">
         <img
-          onMouseOver={() => change([day, text, link])}
+          className="smaller"
+          onMouseOver={() => change([day, text, link, directLink])}
           onClick={() => open(true)}
           alt="gallery"
           style={{ height: 336, width: 294 }}
           src={link}
         />
-        <div>
-          <h2>{day}</h2>
-          <p>{text}</p>
-        </div>
+        <div></div>
       </div>
     </Fragment>
   );
