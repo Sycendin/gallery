@@ -9,7 +9,7 @@ export default function Modal({ open, onClose, info }) {
       <div className=" Overlay-styles"></div>
 
       <div className=" flex flex-column Modal-style">
-        <h1 className="center">{info[0]}</h1>
+        <h1 className="center">{`Drawing Mike Trout every day until the lockout is over. ${info[0]}`}</h1>
         <img className="br2 w-40 h-40 center" src={info[2]} alt="face"></img>
         <div className="flex justify-center">
           <button
