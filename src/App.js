@@ -3,6 +3,7 @@ import React, { Fragment, useState } from "react";
 import Modal from "./components/Modal";
 import Images from "./Images";
 import CardList from "./components/Cardlist";
+import Nav from "./components/Nav";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [changedInfo, setInfo] = useState([]);
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <Fragment>
+      <Nav></Nav>
       <div className="App">
         <div className="Button-wrapper">
           <button onClick={() => setIsOpen(true)}>Open Modal</button>
