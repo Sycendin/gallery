@@ -19,9 +19,23 @@ function App() {
   const routeChange = (path) => {
     setRoute(path);
   };
-  useEffect(() => {
-    console.log("hello");
-  }, [random]);
+
+  const noSamePicture = () => {
+    // the conditon for the while loop
+    let generated = 1;
+    while (generated !== 2) {
+      // Make new random index from images array
+      let newIndex = Math.floor(Math.random() * Images.length);
+      // If the new index doesn't equal the current index then
+      // set the random number state to that new index and
+      // exit while loop otherwise keep repeating
+      if (newIndex !== random) {
+        setRandom(newIndex);
+        generated = 2;
+      }
+    }
+  };
+  useEffect(() => {}, [random]);
   return (
     <Fragment>
       <Nav routePass={routeChange}></Nav>
@@ -33,9 +47,7 @@ function App() {
           {route === "home" ? (
             <button
               className=" pointer:hover br2 bg-light-red ma2 f6 fw5-ns dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black"
-              onClick={() =>
-                setRandom(Math.floor(Math.random() * Images.length))
-              }
+              onClick={noSamePicture}
             >
               Random Image
             </button>

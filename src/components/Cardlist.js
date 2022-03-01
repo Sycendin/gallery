@@ -5,6 +5,7 @@ const CardList = ({ path, randomSelect, changeinfo, images, open }) => {
   // const random = Math.floor(Math.random() * images.length);
 
   // need a unique key for map arrays, otherwise react wont like that
+
   return (
     <div>
       {images.map((user, i) => {
