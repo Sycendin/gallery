@@ -2,14 +2,21 @@ import React, { Fragment } from "react";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="fixed w-100 bottom-0 bg-light-red white-80 pv1 pv1-l ph1">
+      <div className="fixed vh-10 w-100 bottom-0 bg-light-red white-80 ph1">
         <p className="f6">
           <span className="dib mr4 mr5-ns">©2048 Your Company LLC, Inc.</span>
-          <button className="link white-80 hover-light-purple">Terms</button> /
-          <button className="link white-80 hover-gold"> Privacy </button> /
-          <button className=" white-80 ">
+          <button className="f6 link dim ba ph3 pv2 mb2 dib black">
+            Terms
+          </button>{" "}
+          /
+          <button className="f6 link dim ba ph3 pv2 mb2 dib black">
+            {" "}
+            Privacy{" "}
+          </button>{" "}
+          /
+          <h3 className=" f6 ph3 pv2 mb2 dib black ">
             Pictures belong to their respective owners{" "}
-          </button>
+          </h3>
         </p>
       </div>
     </Fragment>
