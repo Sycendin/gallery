@@ -44,7 +44,7 @@ const images = [
   {
     day: "Day 2",
     text: "Sample text",
-    link: ".//images/small2.jpg",
+    link: "/images/small2.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/r9ncz7/drawing_mike_trout_every_day_until_the_lockout_is/",
   },
