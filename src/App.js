@@ -74,6 +74,7 @@ function App() {
             changeinfo={infoChange}
             images={Images}
           />
+          <div className="mt6"></div>
         </div>
       ) : route === "about" ? (
         <About></About>

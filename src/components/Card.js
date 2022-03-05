@@ -10,7 +10,7 @@ const Card = ({ day, text, link, directLink, change, open }) => {
           onClick={() => open(true)}
           alt="gallery"
           style={{ height: 336, width: 294 }}
-          src={link}
+          src={process.env.PUBLIC_URL + link}
         />
         <div></div>
       </div>
