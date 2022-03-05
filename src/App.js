@@ -8,6 +8,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import SearchBox from "./components/SearchBox";
 import images from "./Images";
+
 function App() {
   // react hooks states
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
   };
   // fuction that sets the routes
   const routeChange = (path) => {
+    setSearchfield("");
     setRoute(path);
   };
   // search the images
