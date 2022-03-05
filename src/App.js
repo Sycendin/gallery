@@ -6,6 +6,8 @@ import CardList from "./components/Cardlist";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import SearchBox from "./components/SearchBox";
+import images from "./Images";
 function App() {
   // react hooks states
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +16,7 @@ function App() {
   const [random, setRandom] = useState(
     Math.floor(Math.random() * Images.length)
   );
+  const [searchfield, setSearchfield] = useState("");
   // function that sets the info of the image for the modal
   const infoChange = (event) => {
     setInfo(event);
@@ -22,7 +25,13 @@ function App() {
   const routeChange = (path) => {
     setRoute(path);
   };
-
+  // search the images
+  const onSearchChange = (event) => {
+    setSearchfield(event.target.value);
+  };
+  const filteredImages = images.filter((drawing) => {
+    return drawing.day.toLowerCase().includes(searchfield.toLowerCase());
+  });
   const noSamePicture = () => {
     // the conditon for the while loop
     let generated = 1;
@@ -67,7 +76,10 @@ function App() {
               Modal
             </Modal>
           </div>
+          {route === "all" ? <SearchBox searchChange={onSearchChange} /> : null}
+
           <CardList
+            image={filteredImages}
             path={route}
             randomSelect={random}
             open={setIsOpen}

@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "./Card";
 
-const CardList = ({ path, randomSelect, changeinfo, images, open }) => {
+const CardList = ({ image, path, randomSelect, changeinfo, images, open }) => {
   return (
     <div>
-      {images.map((user, i) => {
+      {/* image is the filtered images based on the searchbox instead of images which is every image */}
+      {image.map((user, i) => {
         // Check if path is home
         if (path === "home") {
           //  If so then only render the card that matches the random number generated
