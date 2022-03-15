@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import SearchBox from "./SearchBox";
 import CardList from "./Cardlist";
 const AllImages = ({
-  searchChange,
+  onSearchChange,
   image,
   path,
   randomSelect,
@@ -12,7 +12,7 @@ const AllImages = ({
 }) => {
   return (
     <Fragment>
-      <SearchBox searchChange={searchChange} />
+      <SearchBox searchChange={onSearchChange} />
       <CardList
         image={image}
         path={path}

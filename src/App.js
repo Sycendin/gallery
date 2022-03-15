@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
 import Images from "./Images";
 import Nav from "./components/Nav";
@@ -14,7 +13,6 @@ function App() {
   // react hooks states
   const [isOpen, setIsOpen] = useState(false);
   const [changedInfo, setInfo] = useState([]);
-  const [route, setRoute] = useState("home");
   const [random, setRandom] = useState(
     Math.floor(Math.random() * Images.length)
   );
@@ -22,11 +20,6 @@ function App() {
   // function that sets the info of the image for the modal
   const infoChange = (event) => {
     setInfo(event);
-  };
-  // fuction that sets the routes
-  const routeChange = (path) => {
-    setSearchfield("");
-    setRoute(path);
   };
   // search the images
   const onSearchChange = (event) => {
@@ -57,10 +50,10 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Nav />
-
-          <div className="content">
+          <div className="pages">
             <Routes>
               <Route
+                exact
                 path="/"
                 element={
                   <Home
@@ -79,6 +72,7 @@ function App() {
                 path="/all"
                 element={
                   <AllImages
+                    onSearchChange={onSearchChange}
                     noSamePicture={noSamePicture}
                     image={filteredImages}
                     path={"all"}
@@ -96,9 +90,7 @@ function App() {
               open={isOpen}
               info={changedInfo}
               onClose={() => setIsOpen(false)}
-            >
-              Modal
-            </Modal>
+            ></Modal>
           </div>
           <Footer />
         </div>

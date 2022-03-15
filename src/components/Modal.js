@@ -26,6 +26,12 @@ export default function Modal({ open, onClose, info }) {
           </button>
           <button
             className="b--red hover-bg-red br2  bg-light-red  ma2"
+            onClick={() => window.open(info[1], "_blank")}
+          >
+            Reference
+          </button>
+          <button
+            className="b--red hover-bg-red br2  bg-light-red  ma2"
             onClick={onClose}
           >
             Close

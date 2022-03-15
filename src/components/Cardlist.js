@@ -15,7 +15,7 @@ const CardList = ({ image, path, randomSelect, changeinfo, images, open }) => {
                 key={i}
                 link={images[i].link}
                 day={images[i].day}
-                text={images[i].text}
+                reference={images[i].reference}
                 directLink={images[i].directLink}
                 change={changeinfo}
                 open={open}
@@ -29,7 +29,7 @@ const CardList = ({ image, path, randomSelect, changeinfo, images, open }) => {
               key={i}
               link={images[i].link}
               day={images[i].day}
-              text={images[i].text}
+              reference={images[i].reference}
               directLink={images[i].directLink}
               change={changeinfo}
               open={open}
