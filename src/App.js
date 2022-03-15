@@ -1,14 +1,15 @@
 import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
 import Images from "./Images";
-import CardList from "./components/Cardlist";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import SearchBox from "./components/SearchBox";
 import images from "./Images";
-
+import Home from "./components/Home";
+import AllImages from "./components/AllImages";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   // react hooks states
   const [isOpen, setIsOpen] = useState(false);
@@ -53,22 +54,43 @@ function App() {
   useEffect(() => {}, [random], [changedInfo]);
   return (
     <Fragment>
-      <Nav routePass={routeChange}></Nav>
-      {/* Render page based on route (home, all, about ) */}
-      {route === "home" || route === "all" ? (
+      <BrowserRouter>
         <div className="App">
-          <h1 className="flex justify-center bg-light-red">
-            Click on an image for more info
-          </h1>
-          {/* Only render random button on home route */}
-          {route === "home" ? (
-            <button
-              className=" pointer:hover br2 bg-light-red ma2 f6 fw5-ns dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black"
-              onClick={noSamePicture}
-            >
-              Random Image
-            </button>
-          ) : null}
+          <Nav />
+
+          <div className="content">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    noSamePicture={noSamePicture}
+                    image={filteredImages}
+                    path={"home"}
+                    randomSelect={random}
+                    open={setIsOpen}
+                    changeinfo={infoChange}
+                    images={Images}
+                  />
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/all"
+                element={
+                  <AllImages
+                    noSamePicture={noSamePicture}
+                    image={filteredImages}
+                    path={"all"}
+                    randomSelect={random}
+                    open={setIsOpen}
+                    changeinfo={infoChange}
+                    images={Images}
+                  />
+                }
+              />
+            </Routes>
+          </div>
           <div className="Button-wrapper">
             <Modal
               open={isOpen}
@@ -78,22 +100,9 @@ function App() {
               Modal
             </Modal>
           </div>
-          {route === "all" ? <SearchBox searchChange={onSearchChange} /> : null}
-
-          <CardList
-            image={filteredImages}
-            path={route}
-            randomSelect={random}
-            open={setIsOpen}
-            changeinfo={infoChange}
-            images={Images}
-          />
-          <div className="mt6"></div>
+          <Footer />
         </div>
-      ) : route === "about" ? (
-        <About></About>
-      ) : null}
-      <Footer></Footer>
+      </BrowserRouter>
     </Fragment>
   );
 }
