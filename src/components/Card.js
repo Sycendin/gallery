@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-const Card = ({ day, text, link, directLink, change, open }) => {
+const Card = ({ day, reference, link, directLink, change, open }) => {
   return (
     <Fragment>
       <div
@@ -9,7 +9,7 @@ const Card = ({ day, text, link, directLink, change, open }) => {
       >
         <img
           className="smaller"
-          onMouseOver={() => change([day, text, link, directLink])}
+          onMouseOver={() => change([day, reference, link, directLink])}
           onClick={() => open(true)}
           alt="gallery"
           src={process.env.PUBLIC_URL + link}
