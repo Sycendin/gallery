@@ -1,14 +1,15 @@
 import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
-import Modal from "./components/Modal";
-import Images from "./Images";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import images from "./Images";
-import Home from "./components/Home";
-import AllImages from "./components/AllImages";
+import Modal from "./components/Modal/Modal";
+import Images from "./components/DrawingsObject/Images";
+import Nav from "./components/Navigation/Nav";
+import About from "./components/About/About";
+import Footer from "./components/Footer/Footer";
+import images from "./components/DrawingsObject/Images";
+import Home from "./components/Home/Home";
+import AllImages from "./components/AllDrawings/AllImages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DrawingVideo from "./components/DrawingVideo/DrawingVideo";
 function App() {
   // react hooks states
   const [isOpen, setIsOpen] = useState(false);
@@ -47,13 +48,13 @@ function App() {
   useEffect(() => {}, [random], [changedInfo]);
   return (
     <Fragment>
+      <h1 className="flex justify-center">Mike Trout Drawing Gallery</h1>
       <BrowserRouter>
         <div className="App">
           <Nav />
           <div className="pages">
             <Routes>
               <Route
-                exact
                 path="/"
                 element={
                   <Home
@@ -83,6 +84,7 @@ function App() {
                   />
                 }
               />
+              <Route path="/video" element={<DrawingVideo />} />
             </Routes>
           </div>
           <div className="Button-wrapper">
