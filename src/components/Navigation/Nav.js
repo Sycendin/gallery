@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="flex justify-center lh-copy bb">
-      <Link to="/">
+      <Link to="/gallery/">
         <button className=" pointer:hover br2 bg-light-red ma2 f6 fw5-ns dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">
           Home
         </button>
