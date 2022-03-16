@@ -21,6 +21,7 @@ const AllImages = ({
         changeinfo={changeinfo}
         images={images}
       />
+      <div style={{ height: 100 }}></div>
     </Fragment>
   );
 };

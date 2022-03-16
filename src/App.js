@@ -52,7 +52,7 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Nav />
-          <div className="pages">
+          <div className="pages ">
             <Routes>
               <Route
                 path="/"

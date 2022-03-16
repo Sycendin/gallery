@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { TwitterTweetEmbed } from "react-twitter-embed";
-
 import "./About.css";
 const About = () => {
   const message = `Currently, for the MLB there is a lockout between players and owners.
@@ -17,18 +16,19 @@ const About = () => {
      continue to get these drawings.`;
   return (
     <Fragment>
-      <div className="flex justify-center">
+      <div className="flex justify-center items-center">
         <div>
           <h1>As of Mar 10, 2022, the lockout has ended!</h1>
           <TwitterTweetEmbed tweetId={"1502015630966415361"} />
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <div className="tc bg-light-red dib br3 pa3 ma2 grow bw2 shadow-5">
           <h1 className="outline  pa3 mr2">What is with these pictures?</h1>
           <p className="outline  pa3 mr2 new-line">{message}</p>
         </div>
       </div>
+      <div style={{ height: 100 }}></div>
     </Fragment>
   );
 };
