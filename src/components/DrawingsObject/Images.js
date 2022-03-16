@@ -5,6 +5,7 @@ const images = [
     link: "/images/small2.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/r9ncz7/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [432, 584],
   },
   {
     day: "Day 24",
@@ -12,6 +13,7 @@ const images = [
     link: "/images/small24.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/rpzlm7/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 26",
@@ -19,6 +21,7 @@ const images = [
     link: "/images/small26.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/rrlks4/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 661],
   },
   {
     day: "Day 29",
@@ -27,6 +30,7 @@ const images = [
     link: "/images/small29.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/rtw04a/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [538, 687],
   },
   {
     day: "Day 33",
@@ -35,6 +39,7 @@ const images = [
     link: "/images/small33.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/rwyyny/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 36",
@@ -43,6 +48,7 @@ const images = [
     link: "/images/small36.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/rzdxdj/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
 
   {
@@ -51,6 +57,7 @@ const images = [
     link: "/images/small50.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/sacx9w/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 51",
@@ -59,6 +66,7 @@ const images = [
     link: "/images/small51.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/sb134z/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 67",
@@ -67,6 +75,7 @@ const images = [
     link: "/images/small67.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/snxcux/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [554, 738],
   },
   {
     day: "Day 73",
@@ -74,6 +83,7 @@ const images = [
     link: "/images/small73.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/ssm77g/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [426, 721],
   },
   {
     day: "Day 75",
@@ -81,6 +91,7 @@ const images = [
     link: "/images/small75.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/su8h1i/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 83",
@@ -88,6 +99,7 @@ const images = [
     link: "/images/small83.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/t0oprv/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [588, 672],
   },
   {
     day: "Day 84",
@@ -95,6 +107,7 @@ const images = [
     link: "/images/small84.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/t1hpdb/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 89",
@@ -102,6 +115,7 @@ const images = [
     link: "/images/small89.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/t5dr8q/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [605, 806],
   },
   {
     day: "Day 94",
@@ -109,6 +123,7 @@ const images = [
     link: "/images/small94.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/t916nx/drawing_mike_trout_every_day_until_the_lockout_is/",
+    resolution: [385, 614],
   },
   {
     day: "Day 97",
@@ -117,6 +132,7 @@ const images = [
     link: "/images/small97.jpg",
     directLink:
       "https://old.reddit.com/r/baseball/comments/tb7r5k/drawing_mike_trout_for_the_last_time_because_the/",
+    resolution: [500, 489],
   },
 ];
 
