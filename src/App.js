@@ -68,9 +68,9 @@ function App() {
                   />
                 }
               />
-              <Route path="/about" element={<About />} />
+              <Route path="/gallery/about" element={<About />} />
               <Route
-                path="/all"
+                path="/gallery/all"
                 element={
                   <AllImages
                     onSearchChange={onSearchChange}
@@ -84,7 +84,7 @@ function App() {
                   />
                 }
               />
-              <Route path="/video" element={<DrawingVideo />} />
+              <Route path="/gallery/video" element={<DrawingVideo />} />
             </Routes>
           </div>
           <div className="Button-wrapper">
